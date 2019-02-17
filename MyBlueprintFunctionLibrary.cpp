@@ -8,3 +8,11 @@
 bool UMyBlueprintFunctionLibrary::IsSteamAPIRunning() {
 	return SteamAPI_Init();
 }
+
+void UMyBlueprintFunctionLibrary::RestartAppIfNecessary(int32 AppID) {
+	SteamAPI_RestartAppIfNecessary(AppID);
+}
+
+void UMyBlueprintFunctionLibrary::RunCallbacks() {
+	SteamAPI_RunCallbacks();
+}
