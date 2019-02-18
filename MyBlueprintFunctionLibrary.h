@@ -68,7 +68,7 @@ Does not work for DLCs*/
 		static bool isAppInstalled(int steamAppID);
 
 	UFUNCTION(BlueprintPure, Category = "Steam|Steam Apps", meta = (DisplayName = "Is DLC Installed", Keywords = "is DLC installed downloaded steam sdk"))
-		static bool isDlcInstalled(int steamAppID)
+		static bool isDlcInstalled(int steamAppID);
 
 	// Checks whether the current App ID is for Cyber Cafes.
 	UFUNCTION(BlueprintPure, Category = "Steam|Steam Apps", meta = (DisplayName = "Is Cybercafe", Keywords = "is in at cybercafe license app id steam sdk"))

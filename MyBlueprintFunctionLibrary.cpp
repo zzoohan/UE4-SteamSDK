@@ -52,7 +52,7 @@ bool UMyBlueprintFunctionLibrary::isAppInstalled(int steamAppID = 480) {
 }
 
 bool UMyBlueprintFunctionLibrary::isDlcInstalled(int steamAppID) {
-	return SteamApps()->BsDlcInstalled(steamAppID);
+	return SteamApps()->BIsDlcInstalled(steamAppID);
 }
 
 bool UMyBlueprintFunctionLibrary::isCybercafe() {
