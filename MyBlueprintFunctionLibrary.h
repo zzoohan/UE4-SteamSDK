@@ -58,17 +58,20 @@ public:
 	/* ------------------------------------------------------------ ISteamApps ------------------------------------------------------------ */
 
 	// Gets all registered DLCs and returns their metadata
-	UFUNCTION(BlueprintCallable, Category = "Steam|Steam Apps", meta = (DisplayName = "Get DLC Data", Keywords = "run check refresh tick callbacks steam sdk"))
+	UFUNCTION(BlueprintPure, Category = "Steam|Steam Apps", meta = (DisplayName = "Get DLC Data", Keywords = "get all dlc steam sdk"))
 		static bool GetAllDLCs(TArray<FSteamDLC>& allDLCs);
 
 	/* Checks if a specific app is installed.
 Does NOT verify ownership
 Does not work for DLCs*/
-	UFUNCTION(BlueprintCallable, Category = "Steam|Steam Apps", meta = (DisplayName = "Is App Installed", Keywords = "is app program game installed downloaded steam sdk"))
+	UFUNCTION(BlueprintPure, Category = "Steam|Steam Apps", meta = (DisplayName = "Is App Installed", Keywords = "is app program game installed downloaded steam sdk"))
 		static bool isAppInstalled(int steamAppID);
 
+	UFUNCTION(BlueprintPure, Category = "Steam|Steam Apps", meta = (DisplayName = "Is DLC Installed", Keywords = "is DLC installed downloaded steam sdk"))
+		static bool isDlcInstalled(int steamAppID)
+
 	// Checks whether the current App ID is for Cyber Cafes.
-	UFUNCTION(BlueprintCallable, Category = "Steam|Steam Apps", meta = (DisplayName = "Is Cybercafe", Keywords = "is in at cybercafe license app id steam sdk"))
+	UFUNCTION(BlueprintPure, Category = "Steam|Steam Apps", meta = (DisplayName = "Is Cybercafe", Keywords = "is in at cybercafe license app id steam sdk"))
 		static bool isCybercafe();
 	
 };

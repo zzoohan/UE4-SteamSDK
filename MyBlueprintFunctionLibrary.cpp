@@ -47,8 +47,12 @@ bool UMyBlueprintFunctionLibrary::GetAllDLCs(TArray<FSteamDLC>& allDLCs) {
 	return wasSuccessful;
 }
 
-bool UMyBlueprintFunctionLibrary::isAppInstalled(int steamAppID) {
+bool UMyBlueprintFunctionLibrary::isAppInstalled(int steamAppID = 480) {
 	return SteamApps()->BIsAppInstalled(steamAppID);
+}
+
+bool UMyBlueprintFunctionLibrary::isDlcInstalled(int steamAppID) {
+	return SteamApps()->BsDlcInstalled(steamAppID);
 }
 
 bool UMyBlueprintFunctionLibrary::isCybercafe() {
